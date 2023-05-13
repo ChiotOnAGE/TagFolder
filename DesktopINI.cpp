@@ -31,7 +31,7 @@ INT_PTR CALLBACK TagEditDialog(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lP
             switch (LOWORD(wParam)) {
                 case IDOK:
                     // 获取用户输入的文本
-                    GetDlgItemText(hwndDlg, IDC_INPUTBOX, result, sizeof(result));
+                    GetDlgItemText(hwndDlg, IDC_INPUTBOX, result, MAX_PATH);
 
                     // 关闭对话框
                     EndDialog(hwndDlg, 0);
